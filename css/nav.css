@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&family=Roboto:ital,wght@1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.8s ease-out;
+  -moz-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+  box-shadow: 0px 0px 2px rgb(190, 139, 139);
+  z-index: 99;
+  background-color: #fee;
+}
+
+.navbar__topRow {
+  color: #4f4f4f;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fee;
+}
+
+.navbar__toggleBtn {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 30px;
+  width: 30px;
+  padding: 0px 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar__toggleBtn.active {
+  justify-content: center;
+}
+
+.navbar__toggleBtn > span {
+  background: #222;
+  height: 3px;
+  width: 100%;
+  border-radius: 25px;
+  transition: 0.1s ease-out;
+}
+
+.navbar__toggleBtn.active > span {
+  transition: 0.1s ease-out;
+  opacity: 0;
+  width: 75%;
+}
+
+.navbar__toggleBtn.active > span:first-child {
+  opacity: 1;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.navbar__toggleBtn.active > span:last-child {
+  opacity: 1;
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
+.navbar__navbarBrand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  margin: 0px 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar__searchArea {
+  flex: 1;
+  margin-left: auto;
+  background: red;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 600px;
+  /* outline: 1px solid blue; */
+  box-shadow: 0 0 1px 1px lightgray;
+  height: 40px;
+}
+
+.navbar__searchArea > input {
+  flex: 1 1 20px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: #333;
+  padding: 5px 10px;
+}
+
+.navbar__searchArea > input:focus {
+  box-shadow: 0 0 5px 1px lightgray;
+}
+
+.navbar__searchArea > button {
+  outline: none;
+  border: none;
+  height: 100%;
+  min-width: 50px;
+  background: url("https://www.themountain.com/content/img/search_btn.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navbar__rightArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 200px;
+  font-family: "Roboto", sans-serif;
+  padding: 0px 20px;
+  flex-wrap: wrap;
+}
+
+.navbar__rightArea > a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: #312d2d;
+}
+
+.navbar__rightArea > a:hover {
+  color: #6d6565;
+}
+
+.navbar__cartIcon {
+  width: 30px;
+  cursor: pointer;
+}
+
+.navbar__bottomRow {
+  background: #073648;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  height: 50px;
+}
+
+.navbar__bottomRow > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0px 8px;
+  padding: 1px 5px;
+}
+
+.navbar__bottomRow > a:hover {
+  filter: brightness(0.7);
+}
+
+@media (max-width: 850px) {
+  .navbar__navbarBrand {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 790px) {
+  .navbar__topRow {
+    height: 60px;
+  }
+
+  .navbar__toggleBtn {
+    display: flex;
+  }
+
+  .navbar__topRow > .navbar__searchArea {
+    display: none;
+  }
+
+  .navbar__bottomRow.show {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    align-items: flex-start;
+  }
+
+  .navbar__bottomRow {
+    position: relative;
+    display: none;
+  }
+
+  .navbar__bottomRow > a {
+    margin: 5px 0px;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  .navbar__bottomRow > form {
+    flex: 1;
+    max-width: 100%;
+    margin: 10px 0px 20px 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar__rightArea {
+    min-width: auto;
+  }
+
+  .navbar__rightArea > a {
+    display: none;
+  }
+
+  .navbar__bottomRow {
+    padding: 10px 5px;
+  }
+
+  .navbar__bottomRow hr {
+    width: 100%;
+    margin: 12px 0px 5px 0px;
+  }
+
+  .navbar__userLinks {
+    display: inline;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar__navbarBrand {
+    font-size: 1.2rem;
+    margin: 0px 5px;
+  }
+
+  .navbar__toggleBtn {
+    height: 25px;
+    width: 25px;
+  }
+
+  .navbar__cartIcon {
+    width: 25px;
+  }
+}
+
+@media (min-width: 790px) {
+  #searchForm {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .navbar__bottomRow hr {
+    display: none;
+  }
+}

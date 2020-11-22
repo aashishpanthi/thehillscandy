@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+.products {
+  /* background: red; */
+  border-radius: 2px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  margin: 5px;
+  position: relative;
+}
+
+.products__topRow {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 50px;
+  /* background: #fafa; */
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+  box-shadow: 0px 1px 0px lightgray;
+}
+
+.products__topRow .products__title {
+  font-size: 25px;
+  font-weight: 550;
+  color: #212121;
+}
+
+.products__topRow > a {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background: #2874f0;
+  border-radius: 3px;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.products__topRow > a:hover {
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.products__bottomRow {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.products__bottomRow svg {
+  position: absolute;
+  fill: #000;
+  height: 75px;
+  width: 50px;
+  background: #fff;
+  box-shadow: 0px 0px 1px 1px #fafa;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.products__bottomRow .products__prevBtn {
+  transform: rotate(180deg);
+  left: 0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.products__bottomRow .products__nextBtn {
+  right: 0;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.products__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 0;
+  transition: 0.2s ease;
+}
+
+.products__product {
+  width: 200px;
+  min-width: 200px;
+  background: #fff;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 5px;
+}
+
+.products__product .products__imageContainer {
+  overflow: hidden;
+  height: 190px;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.products__product .products__imageContainer > img {
+  object-fit: contain;
+  width: 100%;
+  max-width: 190px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.products__product:hover img {
+  transform: scale(1.1);
+}
+
+.products .products__productTitle {
+  color: #555;
+  max-width: 95%;
+  font-weight: bold;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.products__details {
+  margin-top: 10px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.products__details > span {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #a8ad95;
+  padding: 0px 0px 5px 0px;
+}
+
+@media (max-width: 400px) {
+  .products__bottomRow svg {
+    height: 50px;
+    width: 37px;
+    /* background: red; */
+  }
+}
