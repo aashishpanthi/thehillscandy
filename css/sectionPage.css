@@ -1,0 +1,11 @@
+body {
+  background: #fff;
+}
+
+.section__tilte {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+}

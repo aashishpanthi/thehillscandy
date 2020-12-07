@@ -6,24 +6,24 @@
       <span></span>
     </div>
     <a href="/" class="navbar__navbarBrand">The HillsCandy</a>
-    <form method="GET" class="navbar__searchArea">
+    <form method="GET" class="navbar__searchArea" action="./search.php">
       <input
         type="text"
-        name="search"
+        name="query"
         id="searchItem"
         placeholder="Search items"
       />
-      <button type="submit"></button>
+      <button type="submit" name='search'></button>
     </form>
     <div class="navbar__rightArea">
-      <a href="#" class="navbar__userLinks">Login</a>
-      <a href="#" class="navbar__userLinks">Register</a>
+      <a href="login" class="navbar__userLinks">Login</a>
+      <a href="register" class="navbar__userLinks">Register</a>
       <img class="navbar__cartIcon" src="./images/shopping-cart-solid.svg" />
     </div>
   </div>
 
   <div class="navbar__bottomRow">
-    <a href="#">Home</a>
+    <a href="/">Home</a>
     <a href="#">Products</a>
     <a href="#">Shop</a>
     <a href="#">Everyday</a>

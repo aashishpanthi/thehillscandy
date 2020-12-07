@@ -1,13 +1,17 @@
 <?php
 include('./components/product.php');
 
-function productRow($title,$products){
+function productRow($title,$sid,$products){
+  $titleFiltered = str_replace('_', ' ', $title);
+  $random = array('c2i','mnv','lsc');
+  $randomDigit = rand(1,2);
+  $randomDigit1 = rand(0,1);
 
   echo "
   <div class=\"products\">
     <div class=\"products__topRow\">
-      <div class=\"products__title\">$title</div>
-      <a href=\"#\">View all</a>
+      <div class=\"products__title\">$titleFiltered</div>
+      <a href=\"section.php?name=$title&sid=$random[$randomDigit]$sid$random[$randomDigit1]\">View all</a>
     </div>
     <div class=\"products__bottomRow\">
       <svg

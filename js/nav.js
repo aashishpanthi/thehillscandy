@@ -1,4 +1,4 @@
-const searchForm = document.querySelector(".navbar__searchArea");
+let searchForm = document.querySelector(".navbar__searchArea");
 const bottomRow = document.querySelector(".navbar__bottomRow");
 const navbarRightArea = document.querySelector(".navbar__rightArea");
 const navToggleBtn = document.querySelector(".navbar__toggleBtn");
@@ -43,7 +43,7 @@ window.onscroll = () => {
 
   presentScrollPos > 0
     ? (navbarTopRow.style.height = "70px")
-    : (navbarTopRow.style.height = "100px");
+    : (navbarTopRow.style.height = "85px");
 
   if (presentScrollPos > window.innerHeight) {
     navbar.style.position = "fixed";

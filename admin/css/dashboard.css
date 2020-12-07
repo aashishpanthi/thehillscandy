@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(220, 220, 220);
+  font-size: 16px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.admin-panel {
+  max-width: 1800px;
+  width: 100%;
+  min-width: 900px;
+  display: flex;
+}
+
+.slidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  min-width: 200px;
+  overflow-y: scroll;
+  width: 20%;
+  min-height: 100vh;
+  max-height: 100vh;
+  border-right: 1px solid rgb(235, 235, 235);
+  background-color: rgb(247, 247, 247);
+  padding: 10px 0px;
+}
+
+.slidebar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.slidebar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.slidebar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  transition: 1s ease;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.slidebar::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.slidebar .logo {
+  height: 145px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+.slidebar ul {
+  padding: 0;
+  margin: 0;
+}
+.slidebar li {
+  list-style-type: none;
+  margin: 0;
+  position: relative;
+}
+.slidebar li:before {
+  content: "";
+  font-family: "icomoon";
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  position: absolute;
+  display: block;
+  line-height: 40px;
+  color: rgb(102, 102, 102);
+  right: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slidebar ul a {
+  color: rgb(140, 140, 140);
+  text-decoration: none;
+  font: 16px/40px helvetica, verdana, sans-serif;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  display: block;
+  box-shadow: inset 0 1px 0 rgb(255, 255, 255);
+  text-indent: 20px;
+  text-transform: capitalize;
+}
+.slidebar li:hover a {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 0 0 rgb(255, 255, 255), inset 5px 0 0 -1px rgb(234, 83, 63);
+}
+
+/*main*/
+.main {
+  flex: 1;
+  min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  font-family: helvetica, verdana, sans-serif;
+}
+.main .topbar {
+  border-bottom: 1px solid rgb(235, 235, 235);
+  padding: 0 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*topbar顶部按钮栏*/
+.topbar li {
+  list-style: none;
+}
+
+.topbar a {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(102, 102, 102);
+  border-left: 1px solid rgb(235, 235, 235);
+}
+.topbar a:hover {
+  background-color: rgb(247, 247, 247);
+}
+
+.main .topbar input {
+  border-radius: 999px;
+  padding: 5px 10px;
+  height: 35px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  min-width: 200px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0px 0px 1px 1px #fafa;
+}
+
+.main .topbar input:focus {
+  box-shadow: 0px 0px 2px 2px #fafa;
+}
+
+/*mainContent*/
+.mainContent h4 {
+  line-height: 1;
+  font-size: 18px;
+  margin: 1.3em 0 1em;
+  margin-left: 17px;
+}
+
+/*logo*/
+.logo a {
+  width: 88px;
+  height: 88px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin: -45px 0 0 -45px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 50%;
+  background-color: rgb(214, 214, 214);
+}
+.logo a:before {
+  content: "A";
+  width: 70px;
+  height: 70px;
+  font: 50px/70px helvetica, verdana, sans-serif;
+  text-align: center;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 35px;
+  border: 1px solid rgb(210, 210, 210);
+  display: inline-block;
+  background: -webkit-linear-gradient(
+    top,
+    rgb(255, 255, 255),
+    rgb(245, 245, 245)
+  );
+  background: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(245, 245, 245));
+  background: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(245, 245, 245));
+  background: linear-gradient(top, rgb(255, 255, 255), rgb(245, 245, 245));
+}
+
+.statusbar {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid rgb(235, 235, 235);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.statusbar li {
+  list-style: none;
+  height: auto;
+}
+.statusbar a {
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+  text-align: center;
+  height: 30px;
+}
+.statusbar a:hover {
+  background-color: rgb(247, 247, 247);
+}

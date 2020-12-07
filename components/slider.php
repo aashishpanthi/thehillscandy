@@ -10,8 +10,33 @@
     ></path>
   </svg>
 
+
+
   <div class="slider__imgContainer">
-    <img
+  <?php 
+  include_once './hidden/connection.php';
+  
+  $sql = "SELECT name FROM slider";
+  $result = mysqli_query($conn, $sql);
+  
+  $id = 1;
+  while($row = mysqli_fetch_assoc($result)) {
+    $image = $row['name']; 
+    echo "
+        <img
+        class=\"slider__slideImg\"
+        id=\"slider__img$id\"
+        src=\"images/slider/$image\"
+        alt=\"$image\"
+      />
+    ";
+    $id++;
+  }
+  mysqli_close($conn);
+
+  ?>
+
+    <!-- <img
       class="slider__slideImg"
       id="slider__img1"
       src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Sports_en_US_1x._CB431860448_.jpg"
@@ -40,7 +65,7 @@
       id="slider__img5"
       src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Computers_1x._CB432469755_.jpg"
       alt="photo"
-    />
+    /> -->
   </div>
 
   <svg

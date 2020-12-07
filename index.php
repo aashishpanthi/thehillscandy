@@ -1,8 +1,10 @@
 <?php
 
-$route = $_SERVER['REQUEST_URI'];
+// $route = $_SERVER['REQUEST_URI'];
 
-echo $route;
+// echo $route;
+
+include 'pages/home.php';
 
 // if($route == '/thehillscandy/'){
 //     include('./pages/home.php');

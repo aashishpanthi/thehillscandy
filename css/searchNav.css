@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&family=Roboto:ital,wght@1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  box-shadow: 0px 0px 2px rgb(190, 139, 139);
+  background-color: #fee;
+}
+
+.navbar__topRow {
+  color: #4f4f4f;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fee;
+}
+
+.navbar__navbarBrand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  margin: 0px 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar__searchArea {
+  flex: 1;
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 600px;
+  /* outline: 1px solid blue; */
+  box-shadow: 0 0 1px 1px lightgray;
+  height: 50px;
+  border: 3px solid #f55;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.navbar__searchArea > input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: #333;
+  padding: 5px 10px;
+}
+
+.navbar__searchArea > input:focus {
+  box-shadow: 0 0 5px 1px lightgray;
+}
+
+.navbar__searchArea > button {
+  outline: none;
+  border: none;
+  height: 100%;
+  min-width: 50px;
+  background: url("https://www.themountain.com/content/img/search_btn.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* class applies to select element itself, not a wrapper element */
+.select-css {
+  font-size: 12px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  padding: 5px 18px 5px 5px;
+  text-transform: capitalize;
+  max-width: 100%; /* useful when width is set to anything other than 100% */
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  outline: none;
+  z-index: 1;
+  border-right: 1px solid rgb(182, 178, 178);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+      for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+      
+    */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"),
+    linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+  background-position: right 0.7em top 50%, 0 0;
+  /* icon size, then gradient */
+  background-size: 0.65em auto, 100%;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+  display: none;
+}
+
+/* Focus style */
+.select-css:hover {
+  background-color: #aaa;
+  color: #222;
+  outline: none;
+}
+
+.select-css:focus {
+  background-color: #aaa;
+  color: #222;
+  border-right: 1px solid black;
+  outline: none;
+}
+
+/* Set options to normal weight */
+.select-css option {
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-css,
+:root:lang(ar) .select-css,
+:root:lang(iw) .select-css {
+  background-position: left 0.7em top 50%, 0 0;
+  padding: 0.6em 0.8em 0.5em 1.4em;
+}
+
+/* Disabled styles */
+.select-css:disabled,
+.select-css[aria-disabled="true"] {
+  color: graytext;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"),
+    linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+
+.select-css:disabled:hover,
+.select-css[aria-disabled="true"] {
+  border-color: #aaa;
+}
+
+.navbar__rightArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 200px;
+  font-family: "Roboto", sans-serif;
+  padding: 0px 20px;
+  flex-wrap: wrap;
+}
+
+.navbar__rightArea > a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: #312d2d;
+}
+
+.navbar__rightArea > a:hover {
+  color: #6d6565;
+}
+
+.navbar__cartIcon {
+  width: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 870px) {
+  .navbar__rightArea {
+    min-width: 150px;
+  }
+
+  .navbar__rightArea > a {
+    font-size: 11px;
+    margin: 0px 2px;
+  }
+
+  .navbar__rightArea {
+    padding: 0px 10px;
+  }
+  .navbar__cartIcon {
+    width: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar__navbarBrand {
+    font-size: 1rem;
+    margin: 0px 5px;
+  }
+
+  .navbar__cartIcon {
+    width: 25px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar__navbarBrand {
+    font-size: 1.5rem;
+    margin: 0px 5px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar__searchArea {
+    position: absolute;
+    top: 70px;
+  }
+
+  .navbar {
+    margin-bottom: 70px;
+  }
+}

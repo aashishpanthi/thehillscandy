@@ -9,11 +9,11 @@
 <body>
   <div class="login__login-page">
   <div class="login__form">
-      <form class="login-form">
-        <input type="text" placeholder="username"/>
-        <input type="password" placeholder="password"/>
-        <button>login</button>
-        <p class="message">Not registered? <a href="register.php">Create an account</a></p>
+      <form class="login-form" method='post' action='../hidden/loginHandle.php'>
+        <input type="text" name='email' placeholder="Email"/>
+        <input type="password" name='pass' placeholder="password"/>
+        <button type='submit' name='loginSubmit'>login</button>
+        <p class="message">Not registered? <a href="register">Create an account</a></p>
       </form>
     </div>
   </div>

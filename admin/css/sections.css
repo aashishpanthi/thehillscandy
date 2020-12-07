@@ -1,0 +1,35 @@
+.sections__table {
+  display: table;
+  width: 100%;
+  margin: 1rem 0px;
+}
+
+.sections__tableRow {
+  display: table-row;
+}
+
+.sections__tableHeader {
+  display: table-row;
+  color: #fff;
+  background: #242324;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.sections__tableHeader .sections__tableCell {
+  padding: 10px;
+}
+
+.sections__tableCell {
+  display: table-cell;
+  padding: 5px 10px;
+}
+
+.dragHere {
+  cursor: move;
+  padding: 6px 15px;
+  background: url("../../images/icons/drag.jpg");
+  background-size: 300%;
+  background-position: center;
+  margin-right: 10px;
+}
