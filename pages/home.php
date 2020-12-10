@@ -3,12 +3,10 @@ include('components/header.html');
 ?>
 <body>
     <?php
-// include('components/loader.html');
+include('components/loader.html');
 include('components/nav.php');
 include('components/slider.php');
 include('components/AllProductsForHomePage.php');
-// include('components/products.php');
-// productRow('Big sales');
 ?>
 
 <?php

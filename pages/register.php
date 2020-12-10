@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='./css/login.css'>
+  <link rel='stylesheet' href='../css/login.css'>
   <title>Register ~ The HillsCandy</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
         <input type="password" name='pass' placeholder="password"/>
         <input type="password" name='confirmPass' placeholder="Confirm password"/>
         <button type='submit' name='registerSubmit'>Register</button>
-        <p class="message">Not registered? <a href="login">Create an account</a></p>
+        <p class="message">Not registered? <a href="./login.php">Create an account</a></p>
       </form>
     </div>
   </div>

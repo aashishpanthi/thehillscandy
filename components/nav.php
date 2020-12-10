@@ -16,8 +16,8 @@
       <button type="submit" name='search'></button>
     </form>
     <div class="navbar__rightArea">
-      <a href="login" class="navbar__userLinks">Login</a>
-      <a href="register" class="navbar__userLinks">Register</a>
+      <a href="./pages/login.php" class="navbar__userLinks">Login</a>
+      <a href="./pages/register.php" class="navbar__userLinks">Register</a>
       <img class="navbar__cartIcon" src="./images/shopping-cart-solid.svg" />
     </div>
   </div>

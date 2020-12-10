@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='./css/login.css'>
+  <link rel='stylesheet' href='../css/login.css'>
   <title>Login</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
         <input type="text" name='email' placeholder="Email"/>
         <input type="password" name='pass' placeholder="password"/>
         <button type='submit' name='loginSubmit'>login</button>
-        <p class="message">Not registered? <a href="register">Create an account</a></p>
+        <p class="message">Not registered? <a href="./register.php">Create an account</a></p>
       </form>
     </div>
   </div>
